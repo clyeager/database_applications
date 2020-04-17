@@ -1,0 +1,11 @@
+1.The largest amount is 9999.99.
+INSERT INTO expenses (amount, memo, created_on) VALUES (9999.99, 'largest value', NOW());
+INSERT INTO expenses (amount, memo, created_on) VALUES (10000.00, 'too big', NOW());
+
+2.The smallest amout is -9999.99.
+INSERT INTO expenses (amount, memo, created_on) VALUES (-999.99, 'smallest value', NOW());
+INSERT INTO expenses (amount, memo, created_on) VALUES (-1000.00, 'smallest value', NOW());
+
+3.
+ALTER TABLE expenses
+ADD CHECK (amount > 0);
